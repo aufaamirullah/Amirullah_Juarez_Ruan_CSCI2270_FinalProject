@@ -1,0 +1,38 @@
+LulRestaurant name,Location(city),Food type,Price,Rating
+Black Cat,Boulder,American Food,3,3.6
+The Buff Restaurant,Boulder,American Food,1,4.5
+Boulder Cork,Boulder,American Food,2,3.9
+Turley's,Boulder,American Food,2,3.9
+OAK at fourteenth,Boulder,American Food,3,4.4
+Foolish Craig's Cafe,Boulder,American Food,2,3.8
+The Taj,Boulder,Indian Food,2,3.9
+Gurkhas On the hill,Boulder,Indian Food,2,4.5
+Cantina Laredo,Boulder,Mexican Food,2,3.3
+Qdoba Mexican Eats,Boulder,Mexican Food,1,3.8
+Golden Sun Chinese,Boulder,Asian Food,2,2.8
+Sushi Bistro TASUKI,Boulder,Asian Food,2,4.2
+Austin's American Grill,Fort Collins,American Food,2,4.2
+Restaurant 415,Fort Collins,American Food,2,4.5
+Avogadro's Number,Fort Collins,American Food,2,4.1
+Applebee's,Fort Collins,American Food,2,3.0
+Stuft a burger bar,Fort Collins,American Food,2,4.1
+Wild Boar Cafe,Fort Collins,American Food,2,4.7
+Rodizio Grill,Fort Collins,American Food,2,4.5
+IHOP,Fort Collins,American Food,1,3.0
+Lucile's Restaurant,Fort Collins,American Food,2,4.6
+Star of India,Fort Collins,Indian Food,2,4.2
+La Luz Mexican Grill,Fort Collins,Mexican Food,2,4.2
+LuLu Asian Bistro,Fort Collins,Asian Food,2,3.1
+MacKenzie's Chop House,Colorado Spring,American Food,2,3.7
+Mountain Shadows Restaurant,Colorado Spring,American Food,2,4.6
+Summit,Colorado Spring,American Food,3,4.2
+Pepper Tree Restaurant,Colorado Spring,American Food,3,4.4
+Dragon King Chinese Restaurant,Colorado Spring,Asian Food,2,4.1
+Rong Cheng Chinese Restaurant,Colorado Spring,Asian Food,2,4.1
+Pueblo Viejo,Colorado Spring,Mexican Food,2,4.2
+Arceo's Mexican Restaurant,Colorado Spring,Mexican Food,2,4.2
+India Palace Restuarant,Colorado Spring,Indian Food,2,3.7
+Little Nepal:Indian Restaurant & Bar,Colorado Spring,Indian Food,2,4.0
+1515 Restaurant,Denver,American Food,3,4.3
+
+
