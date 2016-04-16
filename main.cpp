@@ -70,7 +70,7 @@ int main(int argc, char*argv[])
             case 3:
                 cout << "Enter Restaurant name:" <<endl;
                 getline(cin, inputString1);
-
+                g.deleterestaurant(inputString1);
                 break;
             case 4:
                 cout << "Enter a starting city:" << endl;
@@ -84,7 +84,7 @@ int main(int argc, char*argv[])
                 cin >> input2;
                 cin.clear();
                 cin.ignore(10000,'\n');
-
+                g.searchbyprice(input2);
                 break;
             case 6:
                 cout << "Enter Restaurant name:" <<endl;
@@ -102,17 +102,16 @@ int main(int argc, char*argv[])
                 cin.clear();
                 cin.ignore(10000,'\n');
                 g.addrestaurtant(inputString1, city, input2, food, cost);
-
                 break;
             case 7:
                 cout << "Enter Food Type:" <<endl;
                 getline(cin, inputString1);
-
+                g.searchbytype(inputString1);
                 break;
             case 8:
                 cout << "Enter City name:" <<endl;
                 getline(cin, inputString1);
-
+                g.searchbylocation(inputString1);
                 break;
             // Quit
             case 9:

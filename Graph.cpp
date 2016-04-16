@@ -268,7 +268,7 @@ vertex * Graph::findVertex(std::string name)
 void Graph::Dijkstra(string starting, string destination)
 {
     vertex * start = findVertex(starting);
-    vertex * end = findVertex(destination);
+    vertex * end = findVertex(destination);//meed to modifiy to return city that destination restaurant is located in
     if (start == NULL || end == NULL)
     {
         cout << "One or more cities doesn't exist" << endl;
@@ -359,30 +359,30 @@ void Graph::Dijkstra(string starting, string destination)
 
 void Graph::addrestaurtant(std::string name, std::string city, int rating, std::string foodtype, int price)
 {
-
+    //add restaurant to target city
 }
 
 void Graph::findrestaurant(std::string name)
 {
-
+    //finds restaurant, gives city restaurant is in
 }
 
 void Graph::deleterestaurant(std::string name)
 {
-
+    //removes restaurant from graph
 }
 
 void Graph::searchbyprice(int price)
 {
-
+    //Lists restaurants with price value
 }
 
 void Graph::searchbylocation(std::string location)
 {
-
+    //lists restaurants in selected city
 }
 
-void Graph::searchbytype(std::string type)
+void Graph::searchbytype(std::string type)//search by food type
 {
-
+    //lists restaurants of specific food type
 }
