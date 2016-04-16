@@ -44,7 +44,7 @@ void Graph::addVertex(string n)
     if(found == false){
         vertex v;
         v.name = n;
-        v.district = -1;
+        //v.district = -1;
         v.visited = false;
         v.parent = NULL;
         v.ID = vertices.size();
@@ -56,7 +56,7 @@ void Graph::addVertex(string n)
 void Graph::displayEdges()
 {
     for(int i = 0; i < vertices.size(); i++){
-        cout<< vertices[i].district <<":" <<vertices[i].name<<"-->";
+        cout<<vertices[i].name<<"-->";
         for(int j = 0; j < vertices[i].adj.size(); j++){
             cout<<vertices[i].adj[j].v->name;
             if (j != vertices[i].adj.size()-1)
@@ -66,7 +66,7 @@ void Graph::displayEdges()
     }
 }
 
-void Graph::assignDistricts()
+/*void Graph::assignDistricts()
 {
     // Starting district num
     int distID = 1;
@@ -82,7 +82,7 @@ void Graph::assignDistricts()
         }
 
     }
-}
+} */
 
 void Graph::BFTraversalLabel(std::string startingCity, int distID)
 {
@@ -100,7 +100,7 @@ void Graph::BFTraversalLabel(std::string startingCity, int distID)
           // set current vertex to be visited.
           vertices[i].visited = true;
           q.push(&vertices[i]);
-          vertices[i].district = distID;
+          //vertices[i].district = distID;
           break;
       }
   }
@@ -115,7 +115,7 @@ void Graph::BFTraversalLabel(std::string startingCity, int distID)
          if (u->adj[i].v->visited == false)
          {
              u->adj[i].v->visited = true;
-             u->adj[i].v->district = distID;
+             //u->adj[i].v->district = distID;
              q.push(u->adj[i].v);
          }
      }
@@ -132,7 +132,7 @@ void Graph::shortestPath(std::string startingCity, std::string endingCity){
         cout << "One or more cities doesn't exist" << endl;
         return;
     }
-    if (end->district != start->district)
+    /*if (end->district != start->district)
     {
         cout << "No safe path between cities" << endl;
         return;
@@ -141,7 +141,7 @@ void Graph::shortestPath(std::string startingCity, std::string endingCity){
     {
         cout << "Please identify the districts before checking distances" << endl;
         return;
-    }
+    } */
 
     start->visited = true;
     start->distance = 0;
@@ -274,7 +274,7 @@ void Graph::Dijkstra(string starting, string destination)
         cout << "One or more cities doesn't exist" << endl;
         return;
     }
-    if (end->district != start->district)
+   /* if (end->district != start->district)
     {
         cout << "No safe path between cities" << endl;
         return;
@@ -283,7 +283,7 @@ void Graph::Dijkstra(string starting, string destination)
     {
         cout << "Please identify the districts before checking distances" << endl;
         return;
-    }
+    }*/
 
     int dist, minDistance;
     vertex *startV, *endV, *s, *parent, *solvedV, *temp;
@@ -357,3 +357,32 @@ void Graph::Dijkstra(string starting, string destination)
     //std::cout << "Minimum Distance: " << minDistance;
 }
 
+void Graph::addrestaurtant(std::string name, std::string city, int rating, std::string foodtype, int price)
+{
+
+}
+
+void Graph::findrestaurant(std::string name)
+{
+
+}
+
+void Graph::deleterestaurant(std::string name)
+{
+
+}
+
+void Graph::searchbyprice(int price)
+{
+
+}
+
+void Graph::searchbylocation(std::string location)
+{
+
+}
+
+void Graph::searchbytype(std::string type)
+{
+
+}

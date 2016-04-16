@@ -21,6 +21,15 @@ When you construct the shortest path between two vertices, there
  a pointer to the parent vertex. I've added a property parent to struct
  vertex that can be used for that purpose.
  */
+struct restaurant{
+    std::string name;
+    std::string city;
+    int rating;
+    std::string foodtype;
+    int price;
+
+};
+
 struct vertex{
     int ID;
     vertex *parent;
@@ -29,15 +38,10 @@ struct vertex{
     bool visited;
     int distance;
     std::vector<adjVertex> adj;
+    std::vector<restaurant> rest; //list of restaurants in city
 };
-struct resturant{
-    std::string name;
-    std::string city;
-    int rating;
-    std::string foodtype;
-    int price;
 
-};
+
 /*Another approach to storing the shortest path is to store a vector of
  pointers to the vertices visited so far along the current path. You can
  use this struct queueVertex for that purpose. Truthfully, storing the parent
@@ -53,15 +57,16 @@ class Graph
         ~Graph();
         void addEdge(std::string v1, std::string v2, int weight);
         void addVertex(std::string name);
-        void addresturtant(std::string name, std::string city, int rating, std::string foodtype, int price);
+        void addrestaurtant(std::string name, std::string city, int rating, std::string foodtype, int price);
         void displayEdges();
-        void deleteresturant();
+        void deleterestaurant(std::string name);
         void searchbyprice(int price);
-        void findresturant(std::string name);
+        void findrestaurant(std::string name);
         void searchbylocation(std::string location);
         void searchbytype(std::string type);
         //void assignDistricts();
         void shortestPath(std::string startingCity, std::string endingCity);
+        void Dijkstra(std::string starting, std::string destination);
 
     protected:
     private:
