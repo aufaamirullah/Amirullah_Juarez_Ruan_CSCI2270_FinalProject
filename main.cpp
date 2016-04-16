@@ -29,7 +29,7 @@ int main(int argc, char*argv[])
     Graph g;
 
     // Read file into graph
-    readFileIntoGraph(g, argv[1]);//"zombieCities.txt");//argv[1]);//
+    readFileIntoGraph(g, "Cities.txt");//argv[1]);//
 //    readFileIntoGraph(g, "bestPlaces.txt");
 
     // Flag used for exiting menu

@@ -56,6 +56,8 @@ void Graph::addVertex(string n)
 void Graph::displayEdges()
 {
     for(int i = 0; i < vertices.size(); i++){
+
+        cout<<vertices[i].name<<endl;
         cout<<vertices[i].name<<"-->";
         for(int j = 0; j < vertices[i].adj.size(); j++){
             cout<<vertices[i].adj[j].v->name;
@@ -360,29 +362,98 @@ void Graph::Dijkstra(string starting, string destination)
 void Graph::addrestaurtant(std::string name, std::string city, int rating, std::string foodtype, int price)
 {
     //add restaurant to target city
+    vertex * start = findVertex(city);
+        if (start == NULL)
+    {
+        cout << "City not found" << endl;
+        return;
+    }
+    for(int i = 0; i < vertices.size(); i++){
+        if(vertices[i].name == city){
+            restaurant av;
+            av.name = name;
+            av.city = city;
+            av.rating = rating;
+            av.foodtype = foodtype;
+            av.price = price;
+            vertices[i].rest.push_back(av);
+        }
+    }
+
 }
 
 void Graph::findrestaurant(std::string name)
 {
     //finds restaurant, gives city restaurant is in
+    for(int i = 0; i < vertices.size(); i++)
+    {
+        for (int j =0; j < vertices[i].rest.size(); j++)
+        {
+            if(vertices[i].rest[j].name == name)
+                {
+                    cout<< "Restaurant located in: " << vertices[i].rest[j].city<<endl;
+                }
+        }
+    }
 }
 
 void Graph::deleterestaurant(std::string name)
 {
     //removes restaurant from graph
+    for(int i = 0; i < vertices.size(); i++)
+    {
+        for (int j =0; j < vertices[i].rest.size(); j++)
+        {
+            if(vertices[i].rest[j].name == name)
+                {
+                    //cout<< "Restaurant located in: " << vertices[i].rest[j].city<<endl;
+                    vertices[i].rest.erase(vertices[i].rest.begin() +j);
+                }
+        }
+    }
 }
 
 void Graph::searchbyprice(int price)
 {
     //Lists restaurants with price value
+    for(int i = 0; i < vertices.size(); i++)
+    {
+        for (int j =0; j < vertices[i].rest.size(); j++)
+        {
+            if(vertices[i].rest[j].price == price)
+                {
+                    cout<< vertices[i].rest[j].name <<" located in: " << vertices[i].rest[j].city<<endl;
+                }
+        }
+    }
 }
 
 void Graph::searchbylocation(std::string location)
 {
     //lists restaurants in selected city
+    for(int i = 0; i < vertices.size(); i++)
+    {
+        for (int j =0; j < vertices[i].rest.size(); j++)
+        {
+            if(vertices[i].rest[j].city == location)
+                {
+                    cout<<vertices[i].rest[j].name<< " located in: " << location <<endl;
+                }
+        }
+    }
 }
 
 void Graph::searchbytype(std::string type)//search by food type
 {
     //lists restaurants of specific food type
+    for(int i = 0; i < vertices.size(); i++)
+    {
+        for (int j =0; j < vertices[i].rest.size(); j++)
+        {
+            if(vertices[i].rest[j].foodtype == type)
+                {
+                    cout<<vertices[i].rest[j].name<< " located in: " << vertices[i].rest[j].city<<endl;
+                }
+        }
+    }
 }
