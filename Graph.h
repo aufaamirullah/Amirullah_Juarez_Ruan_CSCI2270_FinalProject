@@ -24,7 +24,7 @@ When you construct the shortest path between two vertices, there
 struct restaurant{
     std::string name;
     std::string city;
-    int rating;
+    double rating;
     std::string foodtype;
     int price;
 
@@ -57,7 +57,7 @@ class Graph
         ~Graph();
         void addEdge(std::string v1, std::string v2, int weight);
         void addVertex(std::string name);
-        void addrestaurtant(std::string name, std::string city, int rating, std::string foodtype, int price);
+        void addrestaurtant(std::string name, std::string city, double rating, std::string foodtype, int price);
         void displayEdges();
         void deleterestaurant(std::string name);
         void searchbyprice(int price);

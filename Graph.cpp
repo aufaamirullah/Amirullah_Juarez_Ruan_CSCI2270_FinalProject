@@ -359,7 +359,7 @@ void Graph::Dijkstra(string starting, string destination)
     //std::cout << "Minimum Distance: " << minDistance;
 }
 
-void Graph::addrestaurtant(std::string name, std::string city, int rating, std::string foodtype, int price)
+void Graph::addrestaurtant(std::string name, std::string city, double rating, std::string foodtype, int price)
 {
     //add restaurant to target city
     vertex * start = findVertex(city);
