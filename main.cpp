@@ -22,6 +22,7 @@ using namespace std;
 
 void displayMenu();
 void readFileIntoGraph(Graph & g, char* fileName);
+void readinrestaurant(Graph & g, char* fileName);
 
 int main(int argc, char*argv[])
 {
@@ -31,6 +32,7 @@ int main(int argc, char*argv[])
     // Read file into graph
     readFileIntoGraph(g, "Cities.txt");//argv[1]);//
 //    readFileIntoGraph(g, "bestPlaces.txt");
+    readinrestaurant(g, "restaurantData2.txt");
 
     // Flag used for exiting menu
     bool quit = false;
@@ -43,6 +45,10 @@ int main(int argc, char*argv[])
     string city;
     string food;
     int cost;
+
+    //Input restaurant data from file
+
+
 
     while(quit != true)
     {
@@ -206,5 +212,38 @@ void readFileIntoGraph(Graph & g, char* fileName)
 void readinrestaurant(Graph & g, char* filename)
 {
     //read in restaurants into each city
-}
+    int userinput;
+    const int tableSize = 100;
+    ifstream inFile(filename); //"restaurantData2.txt"
+    string data;
 
+    if(inFile.is_open())
+    {
+      while(getline(inFile,data))
+        {
+            //cout << data << endl;
+            stringstream aufa (data);
+
+            string restoname;
+            getline(aufa, restoname,',');
+
+            string city;
+            getline(aufa,city,',');
+
+            string foodtype;
+            getline(aufa,foodtype,',');
+
+            string prices;
+            getline(aufa, prices,',');
+            int price = atoi(prices.c_str());
+
+            string rates;
+            getline(aufa,rates);
+            double rating = atof(rates.c_str());
+
+
+            g.addrestaurtant(restoname, city, rating, foodtype, price);
+        }
+        inFile.close();
+    }
+}

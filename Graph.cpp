@@ -270,7 +270,20 @@ vertex * Graph::findVertex(std::string name)
 void Graph::Dijkstra(string starting, string destination)
 {
     vertex * start = findVertex(starting);
-    vertex * end = findVertex(destination);//meed to modifiy to return city that destination restaurant is located in
+    string ending = NULL;
+
+    for(int x = 0; x < vertices.size(); x++)
+    {
+        for (int y =0; y < vertices[x].rest.size(); y++)
+        {
+            if(vertices[x].rest[y].name == destination)
+                {
+                    ending=vertices[x].name;
+                }
+        }
+    }
+
+    vertex * end = findVertex(ending);//meed to modifiy to return city that destination restaurant is located in
     if (start == NULL || end == NULL)
     {
         cout << "One or more cities doesn't exist" << endl;
@@ -365,7 +378,7 @@ void Graph::addrestaurtant(std::string name, std::string city, double rating, st
     vertex * start = findVertex(city);
         if (start == NULL)
     {
-        cout << "City not found" << endl;
+        //cout << "City not found" << endl;
         return;
     }
     for(int i = 0; i < vertices.size(); i++){
@@ -385,6 +398,7 @@ void Graph::addrestaurtant(std::string name, std::string city, double rating, st
 void Graph::findrestaurant(std::string name)
 {
     //finds restaurant, gives city restaurant is in
+    bool found = false;
     for(int i = 0; i < vertices.size(); i++)
     {
         for (int j =0; j < vertices[i].rest.size(); j++)
@@ -392,8 +406,13 @@ void Graph::findrestaurant(std::string name)
             if(vertices[i].rest[j].name == name)
                 {
                     cout<< "Restaurant located in: " << vertices[i].rest[j].city<<endl;
+                    found = true;
                 }
         }
+    }
+    if (found == false)
+    {
+        cout <<"Not found."<<endl;
     }
 }
 
@@ -416,6 +435,7 @@ void Graph::deleterestaurant(std::string name)
 void Graph::searchbyprice(int price)
 {
     //Lists restaurants with price value
+    bool found = false;
     for(int i = 0; i < vertices.size(); i++)
     {
         for (int j =0; j < vertices[i].rest.size(); j++)
@@ -423,29 +443,42 @@ void Graph::searchbyprice(int price)
             if(vertices[i].rest[j].price == price)
                 {
                     cout<< vertices[i].rest[j].name <<" located in: " << vertices[i].rest[j].city<<endl;
+                    found = true;
                 }
         }
+    }
+    if (found == false)
+    {
+        cout <<"Not found."<<endl;
     }
 }
 
 void Graph::searchbylocation(std::string location)
 {
     //lists restaurants in selected city
+    bool found = false;
     for(int i = 0; i < vertices.size(); i++)
     {
         for (int j =0; j < vertices[i].rest.size(); j++)
         {
+
             if(vertices[i].rest[j].city == location)
                 {
                     cout<<vertices[i].rest[j].name<< " located in: " << location <<endl;
+                    found = true;
                 }
         }
+    }
+    if (found == false)
+    {
+        cout <<"Not found."<<endl;
     }
 }
 
 void Graph::searchbytype(std::string type)//search by food type
 {
     //lists restaurants of specific food type
+    bool found = false;
     for(int i = 0; i < vertices.size(); i++)
     {
         for (int j =0; j < vertices[i].rest.size(); j++)
@@ -453,7 +486,13 @@ void Graph::searchbytype(std::string type)//search by food type
             if(vertices[i].rest[j].foodtype == type)
                 {
                     cout<<vertices[i].rest[j].name<< " located in: " << vertices[i].rest[j].city<<endl;
+                    found = true;
                 }
         }
+    }
+
+    if (found == false)
+    {
+        cout <<"Not found."<<endl;
     }
 }
