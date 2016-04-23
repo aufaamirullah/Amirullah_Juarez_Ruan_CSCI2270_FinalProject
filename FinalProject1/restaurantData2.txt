@@ -1,0 +1,71 @@
+Black Cat,Boulder,American Food,3,3.6
+The Buff Restaurant,Boulder,American Food,1,4.5
+Boulder Cork,Boulder,American Food,2,3.9
+Turley's,Boulder,American Food,2,3.9
+OAK at fourteenth,Boulder,American Food,3,4.4
+Foolish Craig's Cafe,Boulder,American Food,2,3.8
+The Taj,Boulder,Indian Food,2,3.9
+Gurkhas On the hill,Boulder,Indian Food,2,4.5
+Cantina Laredo,Boulder,Mexican Food,2,3.3
+Qdoba Mexican Eats,Boulder,Mexican Food,1,3.8
+Golden Sun Chinese,Boulder,Asian Food,2,2.8
+Sushi Bistro TASUKI,Boulder,Asian Food,2,4.2
+Austin's American Grill,Fort Collins,American Food,2,4.2
+Restaurant 415,Fort Collins,American Food,2,4.5
+Avogadro's Number,Fort Collins,American Food,2,4.1
+Applebee's,Fort Collins,American Food,2,3.0
+Stuft a burger bar,Fort Collins,American Food,2,4.1
+Wild Boar Cafe,Fort Collins,American Food,2,4.7
+Rodizio Grill,Fort Collins,American Food,2,4.5
+IHOP,Fort Collins,American Food,1,3.0
+Lucile's Restaurant,Fort Collins,American Food,2,4.6
+Star of India,Fort Collins,Indian Food,2,4.2
+La Luz Mexican Grill,Fort Collins,Mexican Food,2,4.2
+LuLu Asian Bistro,Fort Collins,Asian Food,2,3.1
+MacKenzie's Chop House,Colorado Spring,American Food,2,3.7
+Mountain Shadows Restaurant,Colorado Spring,American Food,2,4.6
+Summit,Colorado Spring,American Food,3,4.2
+Pepper Tree Restaurant,Colorado Spring,American Food,3,4.4
+Dragon King Chinese Restaurant,Colorado Spring,Asian Food,2,4.1
+Rong Cheng Chinese Restaurant,Colorado Spring,Asian Food,2,4.1
+Pueblo Viejo,Colorado Spring,Mexican Food,2,4.2
+Arceo's Mexican Restaurant,Colorado Spring,Mexican Food,2,4.2
+India Palace Restuarant,Colorado Spring,Indian Food,2,3.7
+Little Nepal:Indian Restaurant & Bar,Colorado Spring,Indian Food,2,4.0
+1515 Restaurant,Denver,American Food,3,4.3
+Table 6,Denver,American Food,2,4.2
+730 South Bar & Grill,Denver,American Food,2,3.8
+city grille,Denver,American Food,2,3.9
+The Arvada Tavern,Denver,American Food,1,4.6
+Territory Kitchen + Bar,Denver,American Food,2,3.1
+Freshcraft Denver,Denver,American Food,2,4.4
+Wazee Supper Club,Denver,American Food,2,3.9
+Steuben's,Denver,American Food,2,4.3
+Annie's Cafe and Bar,Denver,Americn Food,2.4.4
+The Lobby,Denver,American Food,2,4.2
+Sassafras American Eatery,Denver,American Food,2,4.8
+Lou's Food Bar,Denver,American Food,2,4.2
+Wazee Supper Club,Denver,American Food,2,3.9
+TGI Fridays,Denver,American Food,1,3.3
+Del Taco,Denver,American Food,1,2.5
+Wokano Asian Bistro,Denver,Asian Food,2,4.1
+Karma Asian,Denver,Asian Food,2,4.4
+Volcano Asian Cuisine,Denver,Asian Food,2,3.8
+Hong Fu Chinese Restaurant,Denver,Asian Food,2,4.6
+Ooka Sushi and Asian Cuisine,Denver,Asian Food,2,4.4
+La Loma Restaurant,Denver,Mexican Food,2,4.2
+EI Jardin Restaurant,Denver,Mexican Food,2,4.3
+Azitra Restaurant,Denver,Indian Food,2,4.4
+Bender's Brat Haus,Aurora,American Food,1,4.3
+Senor Ric's,Aurora,American Food,2,3.7
+Old Chicago Pizza and Taproom,Aurora,American Food,2,3.4
+Wing Hut Aurora,Aurora,American Food,1,4.5
+Waffle House,Aurora,American Food,1,3.5
+Rosie's Diner Aurora,Aurora,American Food,2,3.9
+Outback Steakhouse,Aurora,American Food,2,3.6
+Golden Shanghai,Aurora,Asian Food,2,3.7
+Honey Bee Asian Bistro,Aurora,Asian Food,2,3.9
+Casa Vallarta Restaurant,Aurora,Mexican Food,2,4.1
+Masalaa Restaurant,Aurora,Indian Food,2,3.6
+
+
