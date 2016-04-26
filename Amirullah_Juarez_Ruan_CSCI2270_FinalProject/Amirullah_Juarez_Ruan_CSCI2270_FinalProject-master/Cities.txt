@@ -1,0 +1,6 @@
+cities,Fort Collins,Boulder,Denver,Aurora,Colorado Springs,
+Fort Collins,0,58,65,70,133
+Boulder,67,0,29,35,97
+Denver,65,29,0,10,71
+Aurora,70,35,10,0,68
+Colorado Springs,133,97,71,68,0
