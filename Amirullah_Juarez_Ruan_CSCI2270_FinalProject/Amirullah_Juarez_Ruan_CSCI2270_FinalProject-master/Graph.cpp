@@ -275,9 +275,9 @@ vertex * Graph::findVertex(std::string name)
 void Graph::Dijkstra(string starting, string destination)
 {
     vertex * start = findVertex(starting);
-    string ending = NULL;
+    vertex * ending = findVertex(destination);
 
-    for(int x = 0; x < vertices.size(); x++)
+    /*for(int x = 0; x < vertices.size(); x++)
     {
         for (int y =0; y < vertices[x].rest.size(); y++)
         {
@@ -286,10 +286,10 @@ void Graph::Dijkstra(string starting, string destination)
                     ending=vertices[x].name;
                 }
         }
-    }
+    }*/
 
-    vertex * end = findVertex(ending);//meed to modifiy to return city that destination restaurant is located in
-    if (start == NULL || end == NULL)
+    //vertex * end = findVertex(ending);//meed to modifiy to return city that destination restaurant is located in
+    if (start == NULL || ending == NULL)
     {
         cout << "One or more cities doesn't exist" << endl;
         return;
