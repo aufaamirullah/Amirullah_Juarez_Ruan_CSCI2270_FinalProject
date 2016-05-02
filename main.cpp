@@ -78,10 +78,11 @@ int main(int argc, char*argv[])
                 getline(cin, inputString1);
                 g.deleterestaurant(inputString1);
                 break;
-            case 4:
+            case 4: //Dijkstra's
                 cout << "Enter a starting city:" << endl;
                 getline(cin,inputString1);
-                cout << "Enter Restaurant name:" << endl;
+                //cout << "Enter Restaurant name:" << endl; //ORIGINAL
+                cout << "Enter an ending city:" << endl;    //NEW, NEED 2 CITIES FOR DIJKSTRA'S
                 getline(cin,inputString2);
                 g.Dijkstra(inputString1,inputString2);
                 break;
