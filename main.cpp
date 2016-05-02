@@ -110,9 +110,20 @@ int main(int argc, char*argv[])
                 g.addrestaurtant(inputString1, city, input2, food, cost);
                 break;
             case 7:
-                cout << "Enter Food Type:" <<endl;
-                getline(cin, inputString1);
-                g.searchbytype(inputString1);
+                foodtypeMenu();
+                cin >> inputString1;
+                if(inputString1 == 1){  //Helps broaden the search, the user doesn't necessarily know that these are the only input options for searchbyType();
+                    g.searchbytype("American Food");
+                }
+                else if(inputString1 == 2){
+                    g.searchbytype("Mexican Food");
+                }
+                else if(inputString1 == 3){
+                    g.searchbytype("Asian Food");
+                }
+                else if(inputString1 == 4){
+                    g.searchbytype("Indian Food");
+                }
                 break;
             case 8:
                 cout << "Enter City name:" <<endl;
@@ -151,6 +162,16 @@ void displayMenu()
     cout << "8. List restaurants in city"<<endl;
     cout << "9. Quit" << endl;
     return;
+}
+
+// Shows the user the inputs for Food Type to select.
+void foodtypeMenu(){
+    cout << "Here are the food types stored in our database." << endl;
+    cout << "Select the option below to search by food type:" <<endl;
+    cout << "1. American Food" << endl;
+    cout << "2. Mexican Food" << endl;
+    cout << "3. Asian Food" << endl;
+    cout << "4. Indian Food" << endl;
 }
 
 /* reads file into graph */
