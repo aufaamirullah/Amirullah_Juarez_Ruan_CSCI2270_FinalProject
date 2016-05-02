@@ -418,7 +418,7 @@ void Graph::findrestaurant(std::string name)
     }
     if (found == false)
     {
-        cout <<"Not found."<<endl;
+        cout <<"Restaurant not found."<<endl;
     }
 }
 
@@ -457,7 +457,7 @@ void Graph::searchbyprice(int price)
     }
     if (found == false)
     {
-        cout <<"Not found."<<endl;
+        cout <<"No restaurants found with that price."<<endl;
     }
 }
 
@@ -482,7 +482,7 @@ void Graph::searchbylocation(std::string location)
     }
     if (found == false)
     {
-        cout <<"Not found."<<endl;
+        cout <<"No restaurants found in " << location << '.' << endl;
     }
 }
 
@@ -505,7 +505,7 @@ void Graph::searchbytype(std::string type)//search by food type
 
     if (found == false)
     {
-        cout <<"Not found."<<endl;
+        cout <<"No "<< type <<" restaurants found."<<endl;
     }
 }
 
