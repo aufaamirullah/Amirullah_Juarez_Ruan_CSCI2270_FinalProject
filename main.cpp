@@ -21,6 +21,7 @@
 using namespace std;
 
 void displayMenu();
+void foodtypeMenu();
 void readFileIntoGraph(Graph & g, char* fileName);
 void readinrestaurant(Graph & g, char* fileName);
 
@@ -112,17 +113,17 @@ int main(int argc, char*argv[])
                 break;
             case 7:
                 foodtypeMenu();
-                cin >> inputString1;
-                if(inputString1 == 1){  //Helps broaden the search, the user doesn't necessarily know that these are the only input options for searchbyType();
+                cin >> input;
+                if(input == 1){  //Helps broaden the search, the user doesn't necessarily know that these are the only input options for searchbyType();
                     g.searchbytype("American Food");
                 }
-                else if(inputString1 == 2){
+                else if(input == 2){
                     g.searchbytype("Mexican Food");
                 }
-                else if(inputString1 == 3){
+                else if(input == 3){
                     g.searchbytype("Asian Food");
                 }
-                else if(inputString1 == 4){
+                else if(input == 4){
                     g.searchbytype("Indian Food");
                 }
                 break;
