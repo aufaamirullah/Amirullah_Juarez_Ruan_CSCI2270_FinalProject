@@ -126,6 +126,11 @@ int main(int argc, char*argv[])
                 else if(input == 4){
                     g.searchbytype("Indian Food");
                 }
+                else if(input >= 5){
+                    cout<<"Enter a food type followed by "Food" (ex. Italian Food, Egyptian Food)" << endl;
+                    cin >> inputString1;
+                    g.searchbytype(inputString1);
+                }
                 break;
             case 8:
                 cout << "Enter City name:" <<endl;
@@ -174,6 +179,7 @@ void foodtypeMenu(){
     cout << "2. Mexican Food" << endl;
     cout << "3. Asian Food" << endl;
     cout << "4. Indian Food" << endl;
+    cout << "5. Enter a Food Type" << endl;  //User has option of entering their own Food Type.
 }
 
 /* reads file into graph */
