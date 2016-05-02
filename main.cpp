@@ -21,6 +21,7 @@
 using namespace std;
 
 void displayMenu();
+void foodtypeMenu();
 void readFileIntoGraph(Graph & g, char* fileName);
 void readinrestaurant(Graph & g, char* fileName);
 
@@ -78,10 +79,11 @@ int main(int argc, char*argv[])
                 getline(cin, inputString1);
                 g.deleterestaurant(inputString1);
                 break;
-            case 4:
+            case 4: //Dijkstra's
                 cout << "Enter a starting city:" << endl;
                 getline(cin,inputString1);
-                cout << "Enter Restaurant name:" << endl;
+                //cout << "Enter Restaurant name:" << endl; //ORIGINAL
+                cout << "Enter an ending city:" << endl;    //NEW, NEED 2 CITIES FOR DIJKSTRA'S
                 getline(cin,inputString2);
                 g.Dijkstra(inputString1,inputString2);
                 break;
@@ -110,9 +112,25 @@ int main(int argc, char*argv[])
                 g.addrestaurtant(inputString1, city, input2, food, cost);
                 break;
             case 7:
-                cout << "Enter Food Type:" <<endl;
-                getline(cin, inputString1);
-                g.searchbytype(inputString1);
+                foodtypeMenu();
+                cin >> input;
+                if(input == 1){  //Helps broaden the search, the user doesn't necessarily know that these are the only input options for searchbyType();
+                    g.searchbytype("American Food");
+                }
+                else if(input == 2){
+                    g.searchbytype("Mexican Food");
+                }
+                else if(input == 3){
+                    g.searchbytype("Asian Food");
+                }
+                else if(input == 4){
+                    g.searchbytype("Indian Food");
+                }
+                else if(input >= 5){
+                    cout<<"Enter a food type followed by "Food" (ex. Italian Food, Egyptian Food)" << endl;
+                    cin >> inputString1;
+                    g.searchbytype(inputString1);
+                }
                 break;
             case 8:
                 cout << "Enter City name:" <<endl;
@@ -151,6 +169,17 @@ void displayMenu()
     cout << "8. List restaurants in city"<<endl;
     cout << "9. Quit" << endl;
     return;
+}
+
+// Shows the user the inputs for Food Type to select.
+void foodtypeMenu(){
+    cout << "Here are the food types stored in our database." << endl;
+    cout << "Select the option below to search by food type:" <<endl;
+    cout << "1. American Food" << endl;
+    cout << "2. Mexican Food" << endl;
+    cout << "3. Asian Food" << endl;
+    cout << "4. Indian Food" << endl;
+    cout << "5. Enter a Food Type" << endl;  //User has option of entering their own Food Type.
 }
 
 /* reads file into graph */

@@ -410,14 +410,15 @@ void Graph::findrestaurant(std::string name)
         {
             if(vertices[i].rest[j].name == name)
                 {
-                    cout<< "Restaurant located in: " << vertices[i].rest[j].city<<endl;
+                    printRestaurant(vertices[i].rest[j]); //NEW PRINT
+                    //cout<< "Restaurant located in: " << vertices[i].rest[j].city<<endl; //OLD PRINT
                     found = true;
                 }
         }
     }
     if (found == false)
     {
-        cout <<"Not found."<<endl;
+        cout <<"Restaurant not found."<<endl;
     }
 }
 
@@ -430,7 +431,8 @@ void Graph::deleterestaurant(std::string name)
         {
             if(vertices[i].rest[j].name == name)
                 {
-                    //cout<< "Restaurant located in: " << vertices[i].rest[j].city<<endl;
+                    cout << "Deleting " << name << endl;
+                    //cout<< "Restaurant located in: " << vertices[i].rest[j].city<<endl; //OLD PRINT
                     vertices[i].rest.erase(vertices[i].rest.begin() +j);
                 }
         }
@@ -447,14 +449,15 @@ void Graph::searchbyprice(int price)
         {
             if(vertices[i].rest[j].price == price)
                 {
-                    cout<< vertices[i].rest[j].name <<" located in: " << vertices[i].rest[j].city<<endl;
+                    printRestaurant(vertices[i].rest[j]);    //NEW PRINT
+                    //cout<< vertices[i].rest[j].name <<" located in: " << vertices[i].rest[j].city<<endl; //OLD PRINT
                     found = true;
                 }
         }
     }
     if (found == false)
     {
-        cout <<"Not found."<<endl;
+        cout <<"No restaurants found with that price."<<endl;
     }
 }
 
@@ -471,14 +474,15 @@ void Graph::searchbylocation(std::string location)
 
             if(vertices[i].rest[j].city == location)
                 {
-                    cout<<vertices[i].rest[j].name<< " located in: " << location <<endl;
+                    printRestaurant(vertices[i].rest[j]);    //NEW PRINT
+                    //cout<<vertices[i].rest[j].name<< " located in: " << location <<endl; //OLD PRINT
                     found = true;
                 }
         }
     }
     if (found == false)
     {
-        cout <<"Not found."<<endl;
+        cout <<"No restaurants found in " << location << '.' << endl;
     }
 }
 
@@ -492,7 +496,8 @@ void Graph::searchbytype(std::string type)//search by food type
         {
             if(vertices[i].rest[j].foodtype == type)
                 {
-                    cout<<vertices[i].rest[j].name<< " located in: " << vertices[i].rest[j].city<<endl;
+                    printRestaurant(vertices[i].rest[j]);    //NEW PRINT
+                    //cout<<vertices[i].rest[j].name<< " located in: " << vertices[i].rest[j].city<<endl; //OLD PRINT
                     found = true;
                 }
         }
@@ -500,6 +505,15 @@ void Graph::searchbytype(std::string type)//search by food type
 
     if (found == false)
     {
-        cout <<"Not found."<<endl;
+        cout <<"No "<< type <<" restaurants found."<<endl;
     }
+}
+
+void Graph::printRestaurant(restaurant print){
+	cout << "Name: " << print.name <<endl;
+	cout << "Located in: " << print.city <<endl;
+	cout << "Rating: " << print.rating << endl;
+	cout << "Type: " << print.foodtype << endl;
+	cout << "Price Rating: " << print.price << endl;
+	cout << endl << endl << endl; //For structure
 }

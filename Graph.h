@@ -76,6 +76,7 @@ class Graph
         //This method should implement a breadth first traversal from the startingCity
         //and assign all cities encountered the distID value
         void BFTraversalLabel(std::string startingCity, int distID);
+        void printRestaurant(restaurant); //Takes in a restaurant, prints information.
 
 };
 
