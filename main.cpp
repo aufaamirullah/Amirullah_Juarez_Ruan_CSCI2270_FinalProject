@@ -25,7 +25,7 @@ void foodtypeMenu();
 void readFileIntoGraph(Graph & g, char* fileName);
 void readinrestaurant(Graph & g, char* fileName);
 
-int main(int argc, char*argv[])
+int main()
 {
     // Create a graph
     Graph g;
